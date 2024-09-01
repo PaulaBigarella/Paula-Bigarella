@@ -10939,7 +10939,8 @@ section {
 section.cta {
   position: relative;
   padding: 15rem 0;
-  background-color: #6100ff;
+  background-image: url("../assets/img/4.webp");
+  object-fit: center;
   background-position: center;
   background-size: cover;
 }
@@ -11157,4 +11158,10 @@ footer a:hover, footer a:active, footer a:focus {
   z-index: 1000 !important;
   width: 100%;
   height: 100%;
+}
+.imagenRedondeada {
+  width: 31rem;
+  height: 28rem;
+  border-radius: 112%;
+  object-fit: cover;
 }
