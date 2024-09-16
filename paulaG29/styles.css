@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+nav {
+  /* displey flex alinea las cosas d ecostado video youtube*/
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.logitech {
+  padding-top: 0.3rem;
+  height: 2rem;
+}
+.burger {
+  height: 2rem;
+  padding-right: 2rem;
+}
+
+nav ul {
+  display: none;
+}
+/* gap es el espacio entre medio de los items */
+/* nav ul {
+  gap: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 0.3rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+} */
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+.fullSeccion {
+  width: 100%;
+  height: 100vh;
+}
+.seccionMediana {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.conjuntoCaracteristicas {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  max-width: 70%;
+  text-align: center;
+  font-size: 1rem;
+}
+.conjuntoCaracteristicas h5 {
+  font-family: 'Anton', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+}
+.conjuntoCaracteristicasSecciones1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  /* background: radial-gradient(circle at 10% 80%, #1b0248c4, #000000); */
+  background: radial-gradient(circle at top right, #1592ca, #000000c4 24%),
+    radial-gradient(circle at top left, #9229f4, #000000c4 68%);
+  color: white;
+}
+.conjuntoCaracteristicasSecciones2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  background: radial-gradient(circle at top right, #ef11ca82, #000000c4 24%),
+    radial-gradient(circle at top left, #9229f4, #000000c4 68%);
+  color: white;
+}
+.conjuntoCaracteristicasSecciones3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  background: radial-gradient(circle at top right, #1583b796, #000000c4 24%),
+    radial-gradient(circle at top left, #361279, #000000c4 68%);
+  color: white;
+}
+
+.conjuntoCaracteristicasSecciones1,
+.conjuntoCaracteristicasSecciones2,
+.conjuntoCaracteristicasSecciones3 {
+  position: relative;
+}
+
+.conjuntoCaracteristicasSecciones1::after,
+.conjuntoCaracteristicasSecciones2::after,
+.conjuntoCaracteristicasSecciones3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1rem;
+  left: 7%; /* Empieza al 15% del contenedor */
+  width: 86%; /* Ancho total desde el 15% al 85% */
+  border-bottom: 1px solid rgba(144, 144, 144, 0.766);
+  box-sizing: border-box;
+}
+.conjuntoCaracteristicasSecciones img {
+  width: 100%;
+  height: 30vh;
+}
+.conjunto {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: fit-content;
+  max-width: 70%;
+  text-align: left;
+  padding-left: 2rem;
+}
+.conjunto h5 {
+  font-family: 'Anton', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+}
+
+.carousel-container {
+  display: flex;
+  width: 400%;
+}
+
+.carousel-slide {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+/* Mobile First */
+@media (min-width: 600px) {
+  .carousel-text {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-text {
+    font-size: 2.5rem;
+  }
+}
+#title {
+  color: white;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: radial-gradient(circle at top right, #1b0235, #000000c4),
+    radial-gradient(circle at top left, #3c14ad, #000000c4);
+  background-size: 100%, cover; /* Agranda la imagen al 120% de ancho y 60% de alto, gradiente cubre el resto */
+  background-position: bottom right, top left; /* Imagen en la esquina inferior derecha y gradiente en la esquina superior izquierda */
+}
+#title h1 {
+  font-size: 3.4rem;
+  padding-top: 8rem;
+  padding-left: 2rem;
+  line-height: 4rem;
+  font-family: 'Anton', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+#title img {
+  position: absolute;
+  width: auto;
+  height: 60vh;
+  max-width: 100vw;
+  bottom: 8%;
+}
+.textoGradient {
+  font-size: 3.4rem; /* Ajusta el tamaño del texto según sea necesario */
+  background: linear-gradient(
+    to right,
+    #662fd0,
+    #6a0988 50%
+  ); /* Gradiente horizontal */
+  -webkit-background-clip: text; /* Para que el fondo se aplique al texto en navegadores WebKit */
+  -moz-background-clip: text; /* Para que el fondo se aplique al texto en Firefox */
+  color: transparent; /* Hace que el color del texto sea transparente para mostrar el gradiente */
+}
+
+/* DISPOSITIVOS */
+@media (min-width: 508px) {
+  #title {
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: radial-gradient(circle at top right, #1b0235, #000000c4),
+      radial-gradient(circle at top left, #3c14ad, #000000c4);
+    background-size: 100%, cover; /* Agranda la imagen al 120% de ancho y 60% de alto, gradiente cubre el resto */
+    background-position: bottom right, top left; /* Imagen en la esquina inferior derecha y gradiente en la esquina superior izquierda */
+  }
+  #title h1 {
+    font-size: 6rem;
+    padding-top: 8rem;
+    padding-left: 2rem;
+    line-height: 6rem;
+    font-family: 'Anton', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    min-width: fit-content;
+  }
+  #title img {
+    position: absolute;
+    right: 0;
+    width: 100vh;
+    height: auto;
+  }
+  .textoGradient {
+    font-size: 6rem; /* Ajusta el tamaño del texto según sea necesario */
+  }
+  .seccionMediana {
+    width: 100%;
+    height: 36vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: justify;
+    gap: 3rem;
+  }
+  .conjuntoCaracteristicas {
+    width: 30%;
+  }
+  .conjuntoCaracteristicas p {
+    width: 50%;
+  }
+  .conjuntoCaracteristicasSecciones1 img,
+  .conjuntoCaracteristicasSecciones2 img,
+  .conjuntoCaracteristicasSecciones3 img {
+    width: 16rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .conjuntoCaracteristicasSecciones1 img,
+  .conjuntoCaracteristicasSecciones3 img,
+  .conjuntoCaracteristicasSecciones2 img {
+    grid-column: 2 / 4;
+  }
+
+  .conjunto {
+    grid-column: 4 / 6;
+  }
+
+  .conjuntoCaracteristicasSecciones1,
+  .conjuntoCaracteristicasSecciones2,
+  .conjuntoCaracteristicasSecciones3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .conjuntoCaracteristicasSecciones1,
+  .conjuntoCaracteristicasSecciones2,
+  .conjuntoCaracteristicasSecciones3 {
+    background: radial-gradient(circle at top right, #1592ca, #000000c4 24%),
+      radial-gradient(circle at top left, #9229f4, #000000c4 68%);
+    color: white;
+  }
+}
